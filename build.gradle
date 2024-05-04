@@ -1,9 +1,17 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
 jar {
     manifest {
         attributes 'Main-Class': 'org.example.Main'
+        attributes 'Start-Class': 'org.example.Main'
+        attributes 'Build-Jdk-Spec': 17
     }
+}
+
+java {
+    sourceCompatibility = '17'
 }
 
 repositories {
